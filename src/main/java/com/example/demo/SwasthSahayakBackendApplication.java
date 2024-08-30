@@ -10,13 +10,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.EncDec.Encrypt;
-
+import io.github.cdimascio.dotenv.Dotenv;
 
 @SpringBootApplication
 @RestController
 public class SwasthSahayakBackendApplication {
-	private final static String ACCOUNT_SID = "AC5aad81a899d633bee1bab677dd72b807";
-	private final static String AUTH_ID = "1b37860a474c1aaa2b9df04fe3484e8b";
+	private final static Dotenv dotenv = Dotenv.configure().load();
+	private final static String ACCOUNT_SID = dotenv.get("TWILIO_ACCOUNT_SID");
+	private final static String AUTH_ID = dotenv.get("TWILIO_AUTH_TOKEN");
 	static {
 		Twilio.init(ACCOUNT_SID, AUTH_ID);
 	}
