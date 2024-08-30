@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: had-backend-service
+  labels:
+    app: had-backend-app
+spec:
+  type: LoadBalancer
+  selector:
+    app: had-backend-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080

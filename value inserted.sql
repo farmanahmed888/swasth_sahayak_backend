@@ -1,0 +1,505 @@
+use swasth_sahayak_backend;
+
+INSERT INTO fieldworker_details (name, mobileno, gender)
+VALUES ('John Doe', 1234567890, 'Male'),
+       ('Jane Smith', 1234567891, 'Female'),
+       ('Emily Johnson', 1234567892, 'Female'),
+       ('Michael Brown', 1234567893, 'Male'),
+       ('Sarah Davis', 1234567894, 'Female'),
+       ('Robert White', 1234567895, 'Male'),
+       ('Amanda Miller', 1234567896, 'Female'),
+       ('Brian Wilson', 1234567897, 'Male'),
+       ('Emma Taylor', 1234567898, 'Female'),
+       ('Christopher Lee', 1234567899, 'Male'),
+       ('Olivia Moore', 1234567800, 'Female'),
+       ('Daniel Jones', 1234567801, 'Male'),
+       ('Sophia Taylor', 1234567802, 'Female'),
+       ('Matthew Clark', 1234567803, 'Male'),
+       ('Isabella Garcia', 1234567804, 'Female'),
+       ('Andrew Martinez', 1234567805, 'Male'),
+       ('Grace Turner', 1234567806, 'Female'),
+       ('David Miller', 1234567807, 'Male'),
+       ('Ella Anderson', 1234567808, 'Female'),
+       ('James Wilson', 1234567809, 'Male');
+
+INSERT INTO doctor_details (name, mobileno, dateofjoining, gender, workingaddress, pinecode, blockcode,
+                            specialization,countofpatient)
+VALUES ('John Doe', 23567890, '2024-02-10', 'Male', '123 Main St, CityName', 123456, 111, 'Specialization1',50),
+       ('Jane Smith', 45678901, '2024-02-11', 'Female', '456 Market St, CityName', 654321, 222, 'Specialization2',50),
+       ('Alice Johnson', 56789012, '2024-02-12', 'Female', '789 Broadway St, CityName', 234567, 333,
+        'Specialization3',50),
+       ('Bob Brown', 46789123, '2024-02-13', 'Male', '101 First St, CityName', 345678, 444, 'Specialization4',50),
+       ('Carol White', 67901234, '2024-02-14', 'Female', '202 Second St, CityName', 456789, 555, 'Specialization5',50),
+       ('Daniel Davis', 89012345, '2024-02-15', 'Male', '303 Third St, CityName', 567890, 666, 'Specialization6',50),
+       ('Eva Garcia', 80123456, '2024-02-16', 'Female', '404 Fourth St, CityName', 678901, 777, 'Specialization7',50),
+       ('Frank Miller', 91234567, '2024-02-17', 'Male', '505 Fifth St, CityName', 789012, 888, 'Specialization8',50),
+       ('Grace Wilson', 234567890, '2024-02-18', 'Female', '606 Sixth St, CityName', 890123, 999, 'Specialization9',50),
+       ('Harry Taylor', 345678901, '2024-02-19', 'Male', '707 Seventh St, CityName', 901234, 777, 'Specialization10',50),
+       ('Isabel Anderson', 456789012, '2024-02-20', 'Female', '808 Eighth St, CityName', 123456, 888,
+        'Specialization11',50),
+       ('Jack Brown', 456790123, '2024-02-21', 'Male', '909 Ninth St, CityName', 234567, 999, 'Specialization12',50),
+       ('Kate Davis', 467901234, '2024-02-22', 'Female', '1010 Tenth St, CityName', 345678, 111, 'Specialization13',50),
+       ('Leo Moore', 678012345, '2024-02-23', 'Male', '1111 Eleventh St, CityName', 456789, 222, 'Specialization14',50),
+       ('Mia Johnson', 890123456, '2024-02-24', 'Female', '1212 Twelfth St, CityName', 567890, 333,
+        'Specialization15',50),
+       ('Nathan White', 891234567, '2024-02-25', 'Male', '1313 Thirteenth St, CityName', 678901, 444,
+        'Specialization16',50),
+       ('Olivia Smith', 902345678, '2024-02-26', 'Female', '1414 Fourteenth St, CityName', 789012, 555,
+        'Specialization17',50),
+       ('Peter Taylor', 124567891, '2024-02-27', 'Male', '1515 Fifteenth St, CityName', 890123, 666,
+        'Specialization18',50),
+       ('Quinn Brown', 234678902, '2024-02-28', 'Female', '1616 Sixteenth St, CityName', 901234, 777,
+        'Specialization19',50),
+       ('Ryan Davis', 345689013, '2024-02-29', 'Male', '1717 Seventeenth St, CityName', 123456, 888,
+        'Specialization20',50);
+
+INSERT INTO patient_details (abhaid, name, mobileno, dob, preferredlanguage, gender, Address, pincode, blockcode)
+VALUES (1, 'John Doe', 23467890, '1990-01-01', 'English', 'Male', '1234 Main St', 123456, 101),
+       (2, 'Jane Smith', 45678901, '1991-02-02', 'Spanish', 'Female', '5678 Broadway Ave', 234567, 102),
+       (3, 'Jim Brown', 56789012, '1992-03-03', 'French', 'Male', '91011 Second St', 345678, 103),
+       (4, 'Jessica White', 47890123, '1993-04-04', 'German', 'Female', '121314 Third Ave', 456789, 104),
+       (5, 'William Black', 68901234, '1994-05-05', 'Chinese', 'Male', '151617 Fourth Blvd', 567890, 105),
+       (6, 'Sophie Miller', 79012345, '1995-06-06', 'Italian', 'Female', '181920 Fifth St', 678901, 106),
+       (7, 'Michael Taylor', 90123456, '1996-07-07', 'Russian', 'Male', '212223 Sixth Ave', 789012, 107),
+       (8, 'Olivia Johnson', 91234567, '1997-08-08', 'Japanese', 'Female', '242526 Seventh Blvd', 890123, 108),
+       (9, 'Daniel Davis', 124567890, '1998-09-09', 'Arabic', 'Male', '272829 Eighth St', 901234, 109),
+       (10, 'Emma Wilson', 245678901, '1999-10-10', 'Portuguese', 'Female', '303132 Ninth Ave', 123456, 110),
+       (11, 'Ryan Anderson', 346789012, '2000-11-11', 'Dutch', 'Male', '333435 Tenth Blvd', 234567, 111),
+       (12, 'Ava Brown', 456789123, '2001-12-12', 'Korean', 'Female', '363738 Eleventh St', 345678, 112),
+       (13, 'Ethan White', 467801234, '2002-01-13', 'Swedish', 'Male', '394041 Twelfth Ave', 456789, 113),
+       (14, 'Chloe Taylor', 678012345, '2003-02-14', 'Turkish', 'Female', '424344 Thirteenth Blvd', 567890, 114),
+       (15, 'Mason Garcia', 789123456, '2004-03-15', 'Hebrew', 'Male', '454647 Fourteenth St', 678901, 115),
+       (16, 'Lily Smith', 890124567, '2005-04-16', 'Greek', 'Female', '484950 Fifteenth Ave', 789012, 116),
+       (17, 'Logan Wilson', 901345678, '2006-05-17', 'Polish', 'Male', '515253 Sixteenth Blvd', 890123, 117),
+       (18, 'Madison Davis', 124567891, '2007-06-18', 'Hindi', 'Female', '545556 Seventeenth St', 901234, 118),
+       (19, 'Carter Miller', 235678902, '2008-07-19', 'Thai', 'Male', '575859 Eighteenth Ave', 123456, 119),
+       (20, 'Sofia Johnson', 346789013, '2009-08-20', 'Vietnamese', 'Female', '606162 Nineteenth Blvd', 234567, 120);
+
+INSERT INTO doctor_encrypt_id (username, did)
+VALUES ('aakash123', 1),
+       ('priyanshu123', 2),
+       ('jass123', 3),
+       ('abhishek123', 4),
+       ('farman123', 5),
+       ('sneha456', 6),
+       ('rohit789', 7),
+       ('kiran567', 8),
+       ('nidhi890', 9),
+       ('akash321', 10),
+       ('ananya234', 11),
+       ('rahul432', 12),
+       ('shivani876', 13),
+       ('vikas987', 14),
+       ('pooja654', 15),
+       ('neha210', 16),
+       ('mohit789', 17),
+       ('sonia321', 18),
+       ('yash456', 19),
+       ('simran543', 20);
+
+INSERT INTO field_worker_id_encrypt (fieldworkerid, fid)
+VALUES ('aakash12', 1),
+       ('priyanshu12', 2),
+       ('jass12', 3),
+       ('abhishek12', 4),
+       ('farman12', 5),
+       ('sneha34', 6),
+       ('rohit56', 7),
+       ('kiran78', 8),
+       ('nidhi90', 9),
+       ('akash21', 10),
+       ('ananya34', 11),
+       ('rahul32', 12),
+       ('shivani76', 13),
+       ('vikas87', 14),
+       ('pooja54', 15),
+       ('neha21', 16),
+       ('mohit78', 17),
+       ('sonia32', 18),
+       ('yash45', 19),
+       ('simran54', 20);
+INSERT INTO patient_fieldworker_mapping (fieldworkerid, patientid)
+VALUES (1, 1),
+       (1, 2),
+       (2, 3),
+       (2, 4),
+       (3, 5),
+       (1, 6),
+       (1, 7),
+       (2, 8),
+       (2, 9),
+       (3, 10),
+       (1, 11),
+       (1, 12),
+       (2, 13),
+       (2, 14),
+       (3, 15),
+       (1, 16),
+       (1, 17),
+       (2, 18),
+       (2, 19),
+       (3, 20);
+
+INSERT INTO icd10_mapping (icd10, disease)
+VALUES ('PSYCHO', 'General'),
+       ('EMOTION', 'General'),
+       ('DISTRESS', 'General'),
+       ('SOCIAL', 'General'),
+       ('ACTIVITY', 'General'),
+       ('F90.0', 'Attention-deficit hyperactivity disorder, predominantly inattentive type'),
+       ('F43.21', 'Adjustment disorder with depressed mood'),
+       ('F40.01', 'Adjustment disorder with anxiety'),
+       ('F32.1', 'Major depressive disorder, single episode, moderate'),
+       ('F31.0', 'Bipolar disorder, current episode hypomanic');
+
+INSERT INTO patient_doctor_mapping (abhaid, doctorid)
+VALUES (1, 1),
+       (2, 1),
+       (3, 3),
+       (4, 2),
+       (6, 1),
+       (7, 1),
+       (5, 2),
+       (8, 4),
+       (9, 3),
+       (10, 5),
+       (11, 1),
+       (12, 2),
+       (13, 6),
+       (14, 3),
+       (15, 7),
+       (16, 2),
+       (17, 8),
+       (18, 4),
+       (19, 1),
+       (20, 9);
+
+INSERT INTO prescription_Table (diseasename, doctorcomment, doctorid, pid, prescription, prescriptiondate, diagnosisid)
+VALUES ('Depression', 'Patient showing improvement with current medication.', 1, 1, 'Sertraline 50 mg daily', '2023-01-15 10:30:00', 1),
+       ('Anxiety', 'Recommend starting therapy sessions.', 2, 2, 'Escitalopram 10 mg daily', '2023-02-20 09:15:00', 2),
+       ('Bipolar Disorder', 'Adjusting dosage due to side effects.', 3, 1, 'Lamotrigine 100 mg daily, Lithium 300 mg twice a day', '2023-03-25 08:45:00', 3),
+       ('PTSD', 'Continued progress, keep dosage.', 4, 3, 'Prazosin 1 mg at bedtime', '2023-04-30 14:00:00', 4),
+       ('ADHD', 'Patient to monitor attention levels and report.', 5, 5, 'Adderall XR 20 mg daily', '2023-05-05 16:30:00', 5),
+       ('Insomnia', 'Suggest sleep hygiene practices.', 6, 4, 'Melatonin 5 mg at bedtime', '2023-06-10 11:45:00', 6),
+       ('Schizophrenia', 'Adjusting antipsychotic medication.', 7, 6, 'Risperidone 2 mg twice a day', '2023-07-15 13:20:00', 7),
+       ('Hypertension', 'Encourage lifestyle changes for blood pressure control.', 8, 8, 'Amlodipine 5 mg daily', '2023-08-20 17:45:00', 8);
+
+INSERT INTO follow_up_data ( icd10, followupdate, doctorid, doctorid,fieldworkerid, patientid)
+VALUES ( 'F32.1', '2023-01-01', 1,1,2),
+       ( 'F41.1', '2023-02-15', 1,2,3),
+       ( 'F32.1', '2023-03-20', 2,3,4),
+       ( 'F31', '2023-04-25', 2,4,5),
+       ( 'F41.1', '2023-05-10', 1,6,5),
+       ( 'F20', '2023-06-25', 1,10,5),
+       ( 'F42', '2023-07-20', 3,4,8),
+       ( 'F32.1', '2023-08-15', 3,7,9),
+       ( 'F20', '2023-09-30', 4,9,1),
+       ( 'F42', '2023-10-15', 4,5,8),
+       ( 'F31', '2023-11-20', 5,9,1),
+       ( 'F20', '2023-12-25', 5,5,9),
+       ( 'F32.1', '2024-01-01', 2,9,12),
+       ( 'F41.1', '2024-02-15', 2,1,9),
+       ( 'F31', '2024-03-20', 3,5,7),
+       ( 'F20', '2024-04-25', 3,8,3),
+       ( 'F42', '2024-05-10', 4, 4,5),
+       ( 'F32.1', '2024-06-25', 4,8,9),
+       ( 'F41.1', '2024-07-20', 1,5,1),
+       ( 'F31', '2024-08-15', 1,3,4);
+
+
+INSERT INTO visited_follow_up_history (followupid, icd10, visited, followupdate, doctorid,diagnoseidgen, doctorid,fieldworkerid, patientid)
+VALUES (4,  'A00', true, '2022-01-01', 1,1,3,4),
+       (5,  'B01', true, '2022-02-15', 2,2,5,6),
+       (6,  'C02', true, '2022-03-20', 3,3,6,5);
+
+INSERT INTO visits_to_reschedule (followupid, icd10, visited, followupdate, doctorid,fieldworkerid, patientid)
+VALUES (2, 'A00', false, '2022-01-01', 3,1,2),
+       (3, 'B01', false, '2022-02-15', 4,2,3),
+       (4, 'C02', false, '2022-03-20', 5,4,5);
+
+
+
+INSERT INTO question_set (ques_text, status, type, icd10)
+VALUES
+
+
+('I have a sense of direction and purpose in life.', 0, 'mcq', 'PSYCHO'), --1
+('I gave up trying to make big improvements or changes in my life a long time ago.', 0, 'mcq', 'PSYCHO'), --2
+('I feel that I get a lot out of my friendships.', 0, 'mcq', 'PSYCHO'), --3
+('I have difficulty organizing my life in a way that is satisfying to me.', 0, 'mcq', 'PSYCHO'), --4
+('In many ways, I feel disappointed about my achievements in life.', 0, 'mcq', 'PSYCHO'), --5
+('In the last few weeks I have felt that I have little or no interest in things around me', 0, 'mcq', 'EMOTION'), --6
+('In the last few weeks I have felt irritated by something', 0, 'mcq', 'EMOTION'), --7
+('In the last few weeks I have felt sharp and attentive', 0, 'mcq', 'EMOTION'), --8
+('In the last few weeks I have felt that things are dull and boring', 0, 'mcq', 'EMOTION'), --9
+('In the last few weeks I have felt guilty about something that I have done or said', 0, 'mcq', 'EMOTION'), --10
+('During the last 30 days, about how often did you feel tired out for no good reason?', 0, 'mcq', 'DISTRESS'), --11
+('During the last 30 days, about how often did you feel nervous?', 0, 'mcq', 'DISTRESS'), --12
+('During the last 30 days, about how often did you feel so nervous that nothing could calm you down?', 0, 'mcq', 'DISTRESS'), --13
+('During the last 30 days, about how often did you feel worthless?', 0, 'mcq', 'DISTRESS'), --14
+('During the last 30 days, about how often did you feel that everything was an effort?', 0, 'mcq', 'DISTRESS'), --15
+('During the last 30 days, about how often did you feel restless or fidgety?', 0, 'mcq', 'DISTRESS'), --16
+('I think the world is becoming a better place to live', 0, 'mcq', 'SOCIAL'), --17
+('I do not feel connected to the society', 0, 'mcq', 'SOCIAL'), --18
+('I think society has the potential for positive changes', 0, 'mcq', 'SOCIAL'), --19
+('I believe that the society can become a better place', 0, 'mcq', 'SOCIAL'), --20
+('I feel I am accepted by other people', 0, 'mcq', 'SOCIAL'), --21
+('I feel a sense of belongingness to society', 0, 'mcq', 'SOCIAL'), --22
+('In the last 1 month, kept eating something more than necessary just because it tasted so good', 0, 'mcq', 'ACTIVITY'), --23
+('In the last 1 month, spent time thinking constructively about ways to improve myself/my relationship with important person/s in my life', 0, 'mcq', 'ACTIVITY'), --24
+('In the last 1 month, went to party just to have a good time', 0, 'mcq', 'ACTIVITY'), --25
+('In the last 1 month, made my living space/work space cleaner and better organized, out of my own choice', 0, 'mcq', 'ACTIVITY'), --26
+('In the last 1 month, did something to help someone without expecting anything in return', 0, 'mcq', 'ACTIVITY'), --27
+('How often do you feel restless or unable to sit still?', 0, 'mcq', 'F90.0'),    --28
+('How frequently do you lose things necessary for tasks or activities?', 0, 'mcq', 'F90.0'), --29
+('How often do you feel a need to keep moving or fidgeting?', 0, 'mcq', 'F90.0'), --30
+('How frequently do you feel constantly overwhelmed or stressed?', 0, 'mcq', 'F43.21'), --31
+('How often do you experience changes in sleep patterns or appetite?', 0, 'mcq', 'F43.21'), --32
+('How often do you avoid certain places or situations because they cause fear or anxiety?', 0, 'mcq', 'F40.01'), --33
+('How often do you worry excessively about different things?', 0, 'mcq', 'F40.01'), --34
+('How often do you engage in risky behaviors during manic episodes?', 0, 'mcq', 'F31.0'), --35
+('How often do you have difficulty concentrating or making decisions during manic episodes?', 0, 'mcq', 'F31.0'), --36
+('How frequently do you experience changes in appetite or weight?', 0, 'mcq', 'F32.1'), --37
+('How often do you feel tired or have low energy most days?', 0, 'mcq', 'F32.1'), --38
+('Do you often have trouble paying attention to details or making careless mistakes in your work or other activities?', 0, 'text', 'F90.0'),
+('Do you often interrupt others or intrude on conversations or games?', 0, 'nat', 'F90.0'),
+('Have you experienced significant changes in your life recently?', 0, 'text', 'F43.21'),
+('Do you often feel sad or hopeless?', 0, 'text', 'F43.21'),
+('Do you have difficulty concentrating or making decisions?', 0, 'text', 'F43.21');
+('Do you often feel nervous, anxious, or on edge?', 0, 'text', 'F40.01'),
+('Do you experience sudden feelings of terror or panic?', 0, 'text', 'F40.01'),
+('Do you experience physical symptoms such as trembling, sweating, or palpitations?', 0, 'text', 'F40.01'),
+('Do you experience periods of abnormally elevated mood or irritability?', 0, 'text', 'F31.0'),
+('Do you experience a decreased need for sleep during manic episodes?', 0, 'text', 'F31.0'),
+('Do you feel overly optimistic or grandiose during manic episodes?', 0, 'text', 'F31.0'),
+('Do you often feel sad, empty, or hopeless?', 0, 'text', 'F32.1'),
+('Have you lost interest or pleasure in activities you used to enjoy?', 0, 'text', 'F32.1'),
+('Do you have trouble sleeping or sleeping too much?', 0, 'text', 'F32.1');
+
+
+
+
+INSERT INTO optiontabeformcq (options, questionid)
+VALUES
+('Strongly disagree', 1),
+('Disagree somewhat', 1),
+('Disagree slightly', 1),
+('Agree slightly', 1),
+('Agree somewhat', 1),
+('Strongly agree', 1),
+('Strongly disagree', 2),
+('Disagree somewhat', 2),
+('Disagree slightly', 2),
+('Agree slightly', 2),
+('Agree somewhat', 2),
+('Strongly agree', 2),
+('Strongly disagree', 3),
+('Disagree somewhat', 3),
+('Disagree slightly', 3),
+('Agree slightly', 3),
+('Agree somewhat', 3),
+('Strongly agree', 3),
+('Strongly disagree', 4),
+('Disagree somewhat', 4),
+('Disagree slightly', 4),
+('Agree slightly', 4),
+('Agree somewhat', 4),
+('Strongly agree', 4),
+('Strongly disagree', 5),
+('Disagree somewhat', 5),
+('Disagree slightly', 5),
+('Agree slightly', 5),
+('Agree somewhat', 5),
+('Strongly agree', 5),
+('Extremely', 6),
+('Quite a bit', 6),
+('Moderately', 6),
+('A little', 6),
+('Very', 6),
+('Slightly or not at all', 6),
+('Extremely', 7),
+('Quite a bit', 7),
+('Moderately', 7),
+('A little', 7),
+('Very', 7),
+('Slightly or not at all', 7),
+('Extremely', 8),
+('Quite a bit', 8),
+('Moderately', 8),
+('A little', 8),
+('Very', 8),
+('Slightly or not at all', 8),
+('Extremely', 9),
+('Quite a bit', 9),
+('Moderately', 9),
+('A little', 9),
+('Very', 9),
+('Slightly or not at all', 9),
+('Extremely', 10),
+('Quite a bit', 10),
+('Moderately', 10),
+('A little', 10),
+('Very', 10),
+('Slightly or not at all', 10),
+('None of the time', 11),
+('A Little of the time', 11),
+('Some of the time', 11),
+('Most of the time', 11),
+('All of the time', 11),
+('None of the time', 12),
+('A Little of the time', 12),
+('Some of the time', 12),
+('Most of the time', 12),
+('All of the time', 12),
+('None of the time', 13),
+('A Little of the time', 13),
+('Some of the time', 13),
+('Most of the time', 13),
+('All of the time', 13),
+('None of the time', 14),
+('A Little of the time', 14),
+('Some of the time', 14),
+('Most of the time', 14),
+('All of the time', 14),
+('None of the time', 15),
+('A Little of the time', 15),
+('Some of the time', 15),
+('Most of the time', 15),
+('All of the time', 15),
+('None of the time', 16),
+('A Little of the time', 16),
+('Some of the time', 16),
+('Most of the time', 16),
+('All of the time', 16),
+('Strongly disagree', 17),
+('Disagree somewhat', 17),
+('Disagree slightly', 17),
+('Agree slightly', 17),
+('Agree somewhat', 17),
+('Strongly agree', 17),
+('Strongly disagree', 18),
+('Disagree somewhat', 18),
+('Disagree slightly', 18),
+('Agree slightly', 18),
+('Agree somewhat', 18),
+('Strongly agree', 18),
+('Strongly disagree', 19),
+('Disagree somewhat', 19),
+('Disagree slightly', 19),
+('Agree slightly', 19),
+('Agree somewhat', 19),
+('Strongly agree', 19),
+('Strongly disagree', 20),
+('Disagree somewhat', 20),
+('Disagree slightly', 20),
+('Agree slightly', 20),
+('Agree somewhat', 20),
+('Strongly agree', 20),
+('Strongly disagree', 21),
+('Disagree somewhat', 21),
+('Disagree slightly', 21),
+('Agree slightly', 21),
+('Agree somewhat', 21),
+('Strongly agree', 21),
+('Strongly disagree', 22),
+('Disagree somewhat', 22),
+('Disagree slightly', 22),
+('Agree slightly', 22),
+('Agree somewhat', 22),
+('Strongly agree', 22),
+('Rarely/Never (Once/never)', 23),
+('Sometimes (About 2-3 times)', 23),
+('Often (About once a week)', 23),
+('Very often (About 3-4 times every week)', 23),
+('Regularly (Almost every day)', 23),
+('Rarely/Never (Once/never)', 24),
+('Sometimes (About 2-3 times)', 24),
+('Often (About once a week)', 24),
+('Very often (About 3-4 times every week)', 24),
+('Regularly (Almost every day)', 24),
+('Rarely/Never (Once/never)', 25),
+('Sometimes (About 2-3 times)', 25),
+('Often (About once a week)', 25),
+('Very often (About 3-4 times every week)', 25),
+('Regularly (Almost every day)', 25),
+('Rarely/Never (Once/never)', 26),
+('Sometimes (About 2-3 times)', 26),
+('Often (About once a week)', 26),
+('Very often (About 3-4 times every week)', 26),
+('Regularly (Almost every day)', 26),
+('Rarely/Never (Once/never)', 27),
+('Sometimes (About 2-3 times)', 27),
+('Often (About once a week)', 27),
+('Very often (About 3-4 times every week)', 27),
+('Regularly (Almost every day)', 27),
+('Rarely/Never (Once/never)', 28),
+('Sometimes (About 2-3 times)', 28),
+('Often (About once a week)', 28),
+('Very often (About 3-4 times every week)', 28),
+('Regularly (Almost every day)', 28),
+('Rarely/Never (Once/never)', 29),
+('Sometimes (About 2-3 times)', 29),
+('Often (About once a week)', 29),
+('Very often (About 3-4 times every week)', 29),
+('Regularly (Almost every day)', 29),
+('Rarely/Never (Once/never)', 30),
+('Sometimes (About 2-3 times)', 30),
+('Often (About once a week)', 30),
+('Very often (About 3-4 times every week)', 30),
+('Regularly (Almost every day)', 30),
+('Rarely/Never (Once/never)', 31),
+('Sometimes (About 2-3 times)', 31),
+('Often (About once a week)', 31),
+('Very often (About 3-4 times every week)', 31),
+('Regularly (Almost every day)', 31),
+('Rarely/Never (Once/never)', 32),
+('Sometimes (About 2-3 times)', 32),
+('Often (About once a week)', 32),
+('Very often (About 3-4 times every week)', 32),
+('Regularly (Almost every day)', 32),
+('Rarely/Never (Once/never)', 33),
+('Sometimes (About 2-3 times)', 33),
+('Often (About once a week)', 33),
+('Very often (About 3-4 times every week)', 33),
+('Regularly (Almost every day)', 33),
+('Rarely/Never (Once/never)', 34),
+('Sometimes (About 2-3 times)', 34),
+('Often (About once a week)', 34),
+('Very often (About 3-4 times every week)', 34),
+('Regularly (Almost every day)', 34),
+('Rarely/Never (Once/never)', 35),
+('Sometimes (About 2-3 times)', 35),
+('Often (About once a week)', 35),
+('Very often (About 3-4 times every week)', 35),
+('Regularly (Almost every day)', 35),
+('Rarely/Never (Once/never)', 36),
+('Sometimes (About 2-3 times)', 36),
+('Often (About once a week)', 36),
+('Very often (About 3-4 times every week)', 36),
+('Regularly (Almost every day)', 36),
+('Rarely/Never (Once/never)', 37),
+('Sometimes (About 2-3 times)', 37),
+('Often (About once a week)', 37),
+('Very often (About 3-4 times every week)', 37),
+('Regularly (Almost every day)', 37),
+('Rarely/Never (Once/never)', 38),
+('Sometimes (About 2-3 times)', 38),
+('Often (About once a week)', 38),
+('Very often (About 3-4 times every week)', 38),
+('Regularly (Almost every day)', 38);
+
+INSERT INTO patient_answers (question_id, diagnose_id, answer)
+VALUES
+    (1, 1, 'Yes'),
+    (2, 2, 'No'),
+    (3, 3, 'Sometimes'),
+    (4, 1, 'Rarely'),
+    (5, 4, 'Often'),
+    (6, 2, 'Always'),
+    (7, 3, 'Never'),
+    (8, 1, 'Occasionally');
+
+
+
+
+

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: had-backend-app
+  labels:
+    app: had-backend-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: had-backend-app
+  template:
+    metadata:
+      labels:
+        app: had-backend-app
+    spec:
+      containers:
+      - name: had-backend-app
+        image: farmanahmed888/had-backend:latest
+        ports:
+        - containerPort: 8080
